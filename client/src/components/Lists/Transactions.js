@@ -135,10 +135,10 @@ export class Transactions extends Component {
 
 	handleCustomRender(selected, options) {
 		if (selected.length === 0) {
-			return 'Select Orgs';
+			return '选择组织';
 		}
 		if (selected.length === options.length) {
-			return 'All Orgs Selected';
+			return '已选所有组织';
 		}
 
 		return selected.join(',');
@@ -203,7 +203,7 @@ export class Transactions extends Component {
 		const { classes } = this.props;
 		const columnHeaders = [
 			{
-				Header: 'Creator',
+				Header: '创建者',
 				accessor: 'creator_msp_id',
 				filterMethod: (filter, rows) =>
 					matchSorter(
@@ -215,7 +215,7 @@ export class Transactions extends Component {
 				filterAll: true
 			},
 			{
-				Header: 'Channel Name',
+				Header: '通道名称',
 				accessor: 'channelname',
 				filterMethod: (filter, rows) =>
 					matchSorter(
@@ -227,7 +227,7 @@ export class Transactions extends Component {
 				filterAll: true
 			},
 			{
-				Header: 'Tx Id',
+				Header: '交易单Id',
 				accessor: 'txhash',
 				className: classes.hash,
 				Cell: row => (
@@ -256,7 +256,7 @@ export class Transactions extends Component {
 				filterAll: true
 			},
 			{
-				Header: 'Type',
+				Header: '类型',
 				accessor: 'type',
 				filterMethod: (filter, rows) =>
 					matchSorter(
@@ -268,7 +268,7 @@ export class Transactions extends Component {
 				filterAll: true
 			},
 			{
-				Header: 'Chaincode',
+				Header: '链码',
 				accessor: 'chaincodename',
 				filterMethod: (filter, rows) =>
 					matchSorter(
@@ -280,7 +280,7 @@ export class Transactions extends Component {
 				filterAll: true
 			},
 			{
-				Header: 'Timestamp',
+				Header: '时间撮',
 				accessor: 'createdt',
 				filterMethod: (filter, rows) =>
 					matchSorter(
@@ -302,7 +302,7 @@ export class Transactions extends Component {
 			<div>
 				<div className={`${classes.filter} row searchRow`}>
 					<div className={`${classes.filterElement} col-md-3`}>
-						<label className="label">From</label>
+						<label className="label">开始</label>
 						<DatePicker
 							id="from"
 							selected={this.state.from}
@@ -319,7 +319,7 @@ export class Transactions extends Component {
 						/>
 					</div>
 					<div className={`${classes.filterElement} col-md-3`}>
-						<label className="label">To</label>
+						<label className="label">结束</label>
 						<DatePicker
 							id="to"
 							selected={this.state.to}
@@ -366,7 +366,7 @@ export class Transactions extends Component {
 								await this.handleSearch();
 							}}
 						>
-							Search
+							检索
 						</Button>
 					</div>
 					<div className="col-md-1">
@@ -377,7 +377,7 @@ export class Transactions extends Component {
 								this.handleClearSearch();
 							}}
 						>
-							Reset
+							重置
 						</Button>
 					</div>
 					<div className="col-md-1">
@@ -386,7 +386,9 @@ export class Transactions extends Component {
 							color="secondary"
 							onClick={() => this.setState({ filtered: [], sorted: [] })}
 						>
-							Clear Filter
+							清除
+							<br />
+							过滤
 						</Button>
 					</div>
 				</div>

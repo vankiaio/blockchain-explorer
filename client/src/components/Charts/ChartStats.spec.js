@@ -234,25 +234,25 @@ describe('ChartStats', () => {
 		expect(wrapper.state('activeTab')).toBe('1');
 		wrapper
 			.find('NavLink')
-			.findWhere(n => n.contains('BLOCKS / MIN'))
+			.findWhere(n => n.contains('区块数量 / 分钟'))
 			.first()
 			.simulate('click');
 		expect(wrapper.state('activeTab')).toBe('2');
 		wrapper
 			.find('NavLink')
-			.findWhere(n => n.contains('TX / HOUR'))
+			.findWhere(n => n.contains('交易数量 / 小时'))
 			.first()
 			.simulate('click');
 		expect(wrapper.state('activeTab')).toBe('3');
 		wrapper
 			.find('NavLink')
-			.findWhere(n => n.contains('TX / MIN'))
+			.findWhere(n => n.contains('交易数量 / 分钟'))
 			.first()
 			.simulate('click');
 		expect(wrapper.state('activeTab')).toBe('4');
 		wrapper
 			.find('NavLink')
-			.findWhere(n => n.contains('BLOCKS / HOUR'))
+			.findWhere(n => n.contains('区块数量 / 小时'))
 			.first()
 			.simulate('click');
 		expect(wrapper.state('activeTab')).toBe('1');

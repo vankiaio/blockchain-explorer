@@ -83,7 +83,7 @@ export class TransactionView extends Component {
 						<div>
 							<CardTitle className={modalClasses.title}>
 								<FontAwesome name="list-alt" className={classes.listIcon} />
-								Transaction Details
+								交易详细信息
 								<button
 									type="button"
 									onClick={this.handleClose}
@@ -113,7 +113,7 @@ export class TransactionView extends Component {
 							<Card className={modalClasses.card}>
 								<CardTitle className={modalClasses.title}>
 									<FontAwesome name="list-alt" className={classes.listIcon} />
-									Transaction Details
+									交易详细信息
 									<button
 										type="button"
 										onClick={this.handleClose}
@@ -126,7 +126,7 @@ export class TransactionView extends Component {
 									<Table striped hover responsive className="table-striped">
 										<tbody>
 											<tr>
-												<th>Transaction ID:</th>
+												<th>交易ID:</th>
 												<td>
 													{transaction.txhash}
 													<button type="button" className={modalClasses.copyBtn}>
@@ -139,35 +139,35 @@ export class TransactionView extends Component {
 												</td>
 											</tr>
 											<tr>
-												<th>Validation Code:</th>
+												<th>校验码:</th>
 												<td>{transaction.validation_code}</td>
 											</tr>
 											<tr>
-												<th>Payload Proposal Hash:</th>
+												<th>内容提案哈希:</th>
 												<td>{transaction.payload_proposal_hash}</td>
 											</tr>
 											<tr>
-												<th>Creator MSP:</th>
+												<th>创建者MSP:</th>
 												<td>{transaction.creator_msp_id}</td>
 											</tr>
 											<tr>
-												<th>Endoser:</th>
+												<th>背书:</th>
 												<td>{transaction.endorser_msp_id}</td>
 											</tr>
 											<tr>
-												<th>Chaincode Name:</th>
+												<th>链码名称:</th>
 												<td>{transaction.chaincodename}</td>
 											</tr>
 											<tr>
-												<th>Type:</th>
+												<th>类型:</th>
 												<td>{transaction.type}</td>
 											</tr>
 											<tr>
-												<th>Time:</th>
+												<th>时间撮:</th>
 												<td>{transaction.createdt}</td>
 											</tr>
 											<tr>
-												<th style={reads}>Reads:</th>
+												<th style={reads}>读取:</th>
 												<td className={classes.JSONtree}>
 													<JSONTree
 														data={transaction.read_set}
@@ -177,7 +177,7 @@ export class TransactionView extends Component {
 												</td>
 											</tr>
 											<tr>
-												<th style={writes}>Writes:</th>
+												<th style={writes}>写入:</th>
 												<td className={classes.JSONtree}>
 													<JSONTree
 														data={transaction.write_set}
@@ -201,7 +201,7 @@ export class TransactionView extends Component {
 					<div>
 						<CardTitle className={modalClasses.title}>
 							<FontAwesome name="list-alt" className={classes.listIcon} />
-							Transaction Details
+							交易详细信息
 							<button
 								type="button"
 								onClick={this.handleClose}

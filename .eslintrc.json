@@ -43,7 +43,7 @@
 			}
 		],
 
-		"no-mixed-spaces-and-tabs": ["error"],
+		"no-mixed-spaces-and-tabs": [2, "smart-tabs"],
 		"no-shadow": ["error"],
 		"no-throw-literal": ["error"],
 		"no-trailing-spaces": ["error"],

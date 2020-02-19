@@ -140,7 +140,7 @@ export class DashboardView extends Component {
 			for (let i = 0; i < 3 && blockList && blockList[i]; i += 1) {
 				const block = blockList[i];
 				const notify = {
-					title: `Block ${block.blocknum} `,
+					title: `区块 ${block.blocknum} `,
 					type: 'block',
 					time: block.createdt,
 					txcount: block.txcount,
@@ -167,10 +167,7 @@ export class DashboardView extends Component {
 						alignItems: 'center'
 					}}
 				>
-					<h1>
-						Please verify your network configuration, database configuration and try
-						again
-					</h1>
+					<h1>请检查你的网络配置, 数据库配置，然后重新尝试。</h1>
 				</div>
 			);
 		}
@@ -192,7 +189,7 @@ export class DashboardView extends Component {
 											<h1 className={classes.count}>{dashStats.latestBlock}</h1>
 										</Col>
 									</Row>
-									BLOCKS
+									区块数量
 								</div>
 								<div className={`${classes.statistic} ${classes.vdivide}`}>
 									<Row>
@@ -205,7 +202,7 @@ export class DashboardView extends Component {
 											<h1 className={classes.count}>{dashStats.txCount}</h1>
 										</Col>
 									</Row>
-									TRANSACTIONS
+									交易数量
 								</div>
 								<div className={`${classes.statistic} ${classes.vdivide}`}>
 									<Row>
@@ -218,7 +215,7 @@ export class DashboardView extends Component {
 											<h1 className={classes.count}>{dashStats.peerCount}</h1>
 										</Col>
 									</Row>
-									NODES
+									节点数量
 								</div>
 								<div className={classes.statistic}>
 									<Row>
@@ -231,7 +228,7 @@ export class DashboardView extends Component {
 											<h1 className={classes.count}>{dashStats.chaincodeCount}</h1>
 										</Col>
 									</Row>
-									CHAINCODES
+									链码数量
 								</div>
 							</Card>
 						</Col>
@@ -253,7 +250,7 @@ export class DashboardView extends Component {
 								<ChartStats />
 							</Card>
 							<Card className={`${classes.section} ${classes.center}`}>
-								<h5>Transactions by Organization</h5>
+								<h5>根据组织划分交易数量</h5>
 								<hr />
 								<OrgPieChart transactionByOrg={transactionByOrg} />
 							</Card>

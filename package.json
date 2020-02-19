@@ -75,7 +75,7 @@
 			"git add"
 		],
 		"**/*.{js,jsx,css}": [
-			"eslint",
+			"eslint --fix",
 			"git add"
 		]
 	},

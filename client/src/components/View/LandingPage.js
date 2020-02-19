@@ -171,13 +171,13 @@ export class LandingPage extends Component {
 					<img src={Logo} style={logoStyle} alt="Hyperledger Logo" />
 					<Slider {...settings}>
 						<div>
-							<h3>ACCESSING THE NETWORK</h3>
+							<h3>正在访问网络...</h3>
 						</div>
 						<div>
-							<h3>CONNECTING TO CHANNEL</h3>
+							<h3>正在连接通道...</h3>
 						</div>
 						<div>
-							<h3>LOADING BLOCKS</h3>
+							<h3>正在加载区块...</h3>
 						</div>
 					</Slider>
 				</div>

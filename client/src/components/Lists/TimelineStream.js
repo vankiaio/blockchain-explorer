@@ -95,21 +95,20 @@ export class TimelineStream extends Component {
 								contentStyle={{
 									backgroundColor: 'transparent'
 								}}
-								buttons={
-									<a
+								buttons={(
+<a
 										data-command="block-link"
 										href="#/"
 										onClick={() => this.handleDialogOpenBlockHash(item.blockhash)}
-									>
+>
 										<img src={blockOpen} alt="View Blocks" className={classes.open} />
-									</a>
-								}
+</a>
+)}
 							>
 								<Typography variant="body1">
-									<b className={classes.text}> Channel Name:</b> {item.channelName}{' '}
-									<br />
-									<b className={classes.text}> Datahash:</b> {item.datahash} <br />
-									<b className={classes.text}> Number of Tx:</b> {item.txcount}
+									<b className={classes.text}> 通道名称:</b> {item.channelName} <br />
+									<b className={classes.text}> 哈希:</b> {item.datahash} <br />
+									<b className={classes.text}> 交易数量:</b> {item.txcount}
 								</Typography>
 								<h5 className={classes.text}>
 									<Badge className={classes.text}>
